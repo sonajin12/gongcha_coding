@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공차</title>
+    <link rel="stylesheet" href="gongchaStyle/style.css">
+    <link rel="stylesheet" href="gongchaStyle/screen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../coding/script/gonchascript.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+
+  <style>
+    :root {
+    --swiper-theme-color: #666;
+    --swiper-pagination-color: #9B3246;
+
+    }
+
+    .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,15px));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,15px));
+    }
+
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 18.541vw);
+    left: auto;
+    }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 18.541vw);
+    right: auto;
+  }
+
+  .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 40px);
+}
+
+  .swiper-pagination:nth-child(5){
+    display: none;
+}
+
+@media screen and (max-width:1200px){
+  .s3_1>.swiper-free-mode>.swiper-wrapper {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width:900px){
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 10px);
+    left: auto;
+    }
+
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 10px);
+    right: auto;
+  }
+
+  .swiper-pagination:nth-last-child(){
+        display: none;
+    }
+}
+@media screen and (max-width:390px){
+  .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,3vw));
+    height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,3vw));
+    }
+
+
+
+}
+
+  
+  </style>
+
+    
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <a href="" class="hd_a_img"><div class="hd_img"><img src="../coding/img/logo.png" alt="gongchalogo"></div></a>
+            <div class="hd_txt_menu">
+                <a href=""><p>Brand</p></a>
+                <a href=""><p>Menu</p></a>
+                <a href=""><p>Store</p></a>
+                <a href=""><p>Membership</p></a>
+                <a href=""><p>Benefit</p></a>
+                <a href=""><p>Event&News</p></a>
+            </div>
+
+            <a href=""><div class="menu_icon"><img src="img/hd-menu-390.png" alt=""></div></a>
+        </header>
+
+        <section class="sec_1">
+            <div class="swiper mySwiper">
+
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/sec1-2.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/sec1-1.jpg" alt="" class="s1_img"></div>
+                  <div class="swiper-slide"><img src="img/sec1-3.jpg" alt=""></div>
+                  <div class="swiper-slide"><img src="img/sec1-4.jpg" alt=""></div>
+
+                    <!-- <div class="swiper-slide"><img src="img/sec1-1-390.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/sec1-2-390.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/sec1-3-390.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="img/sec1-4-390.jpg" alt=""></div> -->
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </section>
+
+
+
+        <section class="sec_1_1">
+          <div class="swiper mySwiper">
+
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="img/sec1-1-390.png" alt=""></div>
+                  <div class="swiper-slide"><img src="img/sec1-2-390.png" alt=""></div>
+                  <div class="swiper-slide"><img src="img/sec1-3-390.png" alt=""></div>
+                  <div class="swiper-slide"><img src="img/sec1-4-390.png" alt=""></div>
+              </div>
+
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+      </section>
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+         var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 4,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <!-- sec1 end -->
+
+
+    <section class="s2">
+      <div class="s2_txt">
+        <h2>BEST COMBINATION</h2>
+        <p>추천 조합</p>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="s2_swiper_wrap">
+
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-1.png" alt=""></div>
+                <h3>블랙 밀크티 + 타피오카 펄</h3>
+                <div class="s2_tea_txt">
+                  <p class="s2_mgn">공차 대표메뉴 블랙 밀크티와<br>
+                    쫄깃쫄깃한 펄의 만남!</p>
+                  <div class="s2_sweet"><img src="img/sec2-sweet.png" alt=""></div>
+                </div>
+              </div>
+  
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-2.png" alt=""></div>
+                <h3>타로 밀크티 + 펄</h3>
+                <div class="s2_tea_txt">
+                  <p class="s2_mgn">고소하고 달콤한 타로 밀크티와<br>
+                    쫀득쫀득한 펄의 만남!</p>
+                    <div class="s2_sweet"><img src="img/sec2-sweet.png" alt=""></div>
+                </div>
+              </div>
+  
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-3.png" alt=""></div>
+                <h3>자몽 그린티 + 알로에</h3>
+                <div class="s2_tea_txt">
+                  <p>달콤쌉싸름한 자몽과<br>
+                    사각사각한 알로에 토핑을 더한<br>
+                    과일믹스 그린티</p>
+                    <div class="s2_sweet"><img src="img/sec2-sweet.png" alt=""></div>
+                </div>
+              </div>
+  
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-1.png" alt=""></div>
+                <h3>우롱티 + 코코넛 + 밀크폼</h3>
+                <div class="s2_tea_txt">
+                  <p>우롱차에 코코넛 젤리와<br>
+                    달콤짭쪼름한 밀크폼을 올린<br>
+                    오리지널티</p>
+                  <div class="s2_sweet"><img src="img/sec2-oulong.png" alt=""></div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="swiper-slide">
+
+            <div class="s2_swiper_wrap">
+
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-5.png" alt=""></div>
+                <h3>청귤 스파클링티 + 알로에</h3>
+                <div class="s2_tea_txt">
+                  <p>청귤과 자스민 그린티를<br>
+                    블렌딩한 스파클링 티와<br>
+                    아삭아삭한 식감의 알로에 토핑</p>
+                  <div class="s2_sweet"><img src="img/sec2-oulong.png" alt=""></div>
+                </div>
+              </div>
+  
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-6.png" alt=""></div>
+                <h3>망고 요구르트 + 화이트펄</h3>
+                <div class="s2_tea_txt">
+                  <p>달콤한 망고 과육과<br>
+                    요구르트에 화이트펄의<br>
+                    꼬들꼬들함이 느껴지는 주스</p>
+                  <div class="s2_sweet"><img src="img/sec2-oulong.png" alt=""></div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section class="sec2-1">
+      <div class="s2_txt">
+        <h2>BEST COMBINATION</h2>
+        <p>추천 조합</p>
+      </div>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="s2_swiper_wrap">
+
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-1.png" alt=""></div>
+                <h3>블랙 밀크티 + 타피오카 펄</h3>
+                <div class="s2_tea_txt">
+                  <p class="s2_mgn">공차 대표메뉴 블랙 밀크티와<br>
+                    쫄깃쫄깃한 펄의 만남!</p>
+                  <div class="s2_sweet"><img src="img/sec2-sweet.png" alt=""></div>
+                </div>
+              </div>
+  
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-2.png" alt=""></div>
+                <h3>타로 밀크티 + 펄</h3>
+                <div class="s2_tea_txt">
+                  <p class="s2_mgn">고소하고 달콤한 타로 밀크티와<br>
+                    쫀득쫀득한 펄의 만남!</p>
+                    <div class="s2_sweet"><img src="img/sec2-sweet.png" alt=""></div>
+                </div>
+              </div>  
+              
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="s2_swiper_wrap">
+
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-3.png" alt=""></div>
+                <h3>자몽 그린티 + 알로에</h3>
+                <div class="s2_tea_txt">
+                  <p>달콤쌉싸름한 자몽과<br>
+                    사각사각한 알로에 토핑을 더한<br>
+                    과일믹스 그린티</p>
+                    <div class="s2_sweet"><img src="img/sec2-sweet.png" alt=""></div>
+                </div>
+              </div>
+  
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-1.png" alt=""></div>
+                <h3>우롱티 + 코코넛 + 밀크폼</h3>
+                <div class="s2_tea_txt">
+                  <p>우롱차에 코코넛 젤리와<br>
+                    달콤짭쪼름한 밀크폼을 올린<br>
+                    오리지널티</p>
+                  <div class="s2_sweet"><img src="img/sec2-oulong.png" alt=""></div>
+                </div>
+              </div>
+
+            </div>
+            </div>
+
+
+
+          <div class="swiper-slide">
+            <div class="s2_swiper_wrap">
+
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-5.png" alt=""></div>
+                <h3>청귤 스파클링티 + 알로에</h3>
+                <div class="s2_tea_txt">
+                  <p>청귤과 자스민 그린티를<br>
+                    블렌딩한 스파클링 티와<br>
+                    아삭아삭한 식감의 알로에 토핑</p>
+                  <div class="s2_sweet"><img src="img/sec2-oulong.png" alt=""></div>
+                </div>
+              </div>
+  
+              <div class="s2_img">
+                <div class="s2_tea"><img src="img/sec2-6.png" alt=""></div>
+                <h3>망고 요구르트 + 화이트펄</h3>
+                <div class="s2_tea_txt">
+                  <p>달콤한 망고 과육과<br>
+                    요구르트에 화이트펄의<br>
+                    꼬들꼬들함이 느껴지는 주스</p>
+                  <div class="s2_sweet"><img src="img/sec2-oulong.png" alt=""></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <!-- sec2 end -->
+
+    <section class="s3">
+      <div class="s3_txt">
+        <h2>GONGCHA 메뉴</h2>
+        <p>공차 메뉴들을 만나보세요.</p>
+      </div>
+      <div class="s3_img_wrap">
+        <a href=""><div class="s3_img"><img src="img/sec3-1.png" alt=""></div></a>
+      <a href=""><div class="s3_img"><img src="img/sec3-2.png" alt=""></div></a>
+      <a href=""><div class="s3_img"><img src="img/sec3-3.png" alt=""></div></a>
+      <a href=""><div class="s3_img"><img src="img/sec3-4.png" alt=""></div></a>
+      <a href=""><div class="s3_img"><img src="img/sec3-5.png" alt=""></div></a>
+      <a href=""><div class="s3_img"><img src="img/sec3-6.png" alt=""></div></a>
+      <a href=""><div class="s3_img"><img src="img/sec3-7.png" alt=""></div></a>
+      </div>
+    </section>
+
+    <section class="s3_1">
+      <div class="s3_txt">
+        <h2>GONGCHA 메뉴</h2>
+        <p>공차 메뉴들을 만나보세요.</p>
+      </div>
+
+      <div class="swiper mySwiper_3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-1.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-2.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-3.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-4.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-5.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-6.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide swiper_lst">
+            <a href=""><div class="s3_img"><img src="img/sec3-7.png" alt=""></div></a>
+          </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+      <script>
+        var swiper = new Swiper(".mySwiper_3", {
+          slidesPerView: 4,
+          spaceBetween: -80,
+          freeMode: true,
+
+          scrollbar: {
+         el: ".swiper-scrollbar",
+         clickable: true,
+          },
+
+        });
+      </script>
+      
+    </section>
+
+    <section class="s3_2">
+      <div class="s3_txt">
+        <h2>GONGCHA 메뉴</h2>
+        <p>공차 메뉴들을 만나보세요.</p>
+      </div>
+
+      <div class="swiper mySwiper_4">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-1.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-2.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-3.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-4.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-5.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-6.png" alt=""></div></a>
+          </div>
+          <div class="swiper-slide">
+            <a href=""><div class="s3_img"><img src="img/sec3-7.png" alt=""></div></a>
+          </div>
+        </div>
+        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+
+      <script>
+        var swiper = new Swiper(".mySwiper_4", {
+          slidesPerView: 2,
+          spaceBetween: -15,
+          freeMode: true,
+
+          scrollbar: {
+         el: ".swiper-scrollbar",
+         clickable: true,
+          },
+
+        });
+      </script>
+      
+    </section>
+
+    <!-- sec3 end -->
+
+    <section class="s4">
+      <div class="s4_txt">
+        <h2 class="s4_1920">HOW TO ORDER 주문하기</h2>
+        <h2 class="s4_390">HOW TO ORDER</h2>
+        <p>공차는 취향에 맞게 토핑, 당도, 얼음량까지<br>
+          맞춤주문 가능합니다.</p>
+      </div>
+
+      <div class="s4_wrap">
+        <div class="s4_con">
+          <div class="s4_img"><img src="img/sec4-1.png" alt=""></div>
+
+          <div class="s4_name">
+            <h3 class="s4_step">STEP 01</h3>
+            <h3 class="s4_mgn s4_2 s4_hig">TEA MENU</h3>
+          </div>
+
+          <p class="s4_1 s4_3">취향에 맞게<br>
+            공차의 음료를 고르세요.</p>
+        </div>
+
+        <div class="s4_con">
+          <div class="s4_img"><img src="img/sec4-2.png" alt=""></div>
+          
+          <div class="s4_name">
+            <h3 class="s4_step">STEP 02</h3>
+          <h3 class="s4_mgn s4_2 s4_hig">TOPPINGS</h3>
+          </div>
+
+          <p>6가지 토핑 중<br>
+            원하는 토핑을 선택하세요.<br>
+            (최대 3가지 선택 가능)</p>
+        </div>
+
+        <div class="s4_con">
+          <div class="s4_img"><img src="img/sec4-3.png" alt=""></div>
+
+          <div class="s4_name">
+            <h3 class="s4_step">STEP 03</h3>
+            <h3 class="s4_hig">SWEET & ICE GRADE</h3>
+          </div>
+
+          <p class="s4_3">당도와 얼음량을 <br>
+            원하시는 만큼 조절하세요.</p>
+        </div>
+      </div>
+
+      <div class="s4_click"><div class="s4_clk_txt">자세히 보기</div></div>
+    </section>
+
+
+    <!-- s4 end -->
+
+    <section class="s5">
+      <div class="s5_txt">
+        <h2>TEA RECIPE</h2>
+        <p>공차 티 레시피</p>
+      </div>
+
+      <div class="s5_wrap">
+        
+        <div class="s5_img">
+          <img src="img/sec5.png" alt="">
+        </div>
+  
+        <div class="s5_con">
+          <div class="s5_big_txt">
+            <h3>쥬얼리</h3>
+            <h3>-</h3>
+            <h3 class="s5_red">Jewelry</h3>
+          </div>
+  
+          <p>티백이나 가루가 아닌 황실에 바치던 잎차만 골라<br>
+            1도 1초도 어기지 않고 차마다 다른 황금률로 우려<br>
+            한 잔 한 잔 부드러움을 더한 차와 카사바 뿌리의<br>
+            녹말로 만든 쫀득쫀득한 식감의 토핑과 만나<br>
+            다양한 식감을 즐기세요
+          </p>
+          
+          <div class="s4_click s5_click"><div class="s4_clk_txt s5_clk_txt">레시피 더보기</div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- s5 end -->
+
+    <section class="s6">
+      <div class="s6_txt"><h2>EVENT</h2></div>
+
+      <div class="s6_wrap">
+
+       <a href="">
+        <div class="s6_con">
+          <div class="s6_img">
+            <img src="img/sec6-1.png" alt="">
+          </div>
+        <div class="s6_con_txt">
+          <h3>NEW OPEN<br>
+              <span class="s6_ltl">오픈 매장 안내</span>
+            </h3>
+          <p class="s6_p2">새로 오픈한 공차 매장 정보를 확인해보세요!</p>
+          <p class="s6_p3">새로 오픈한 공차<br>매장 정보를 확인해보세요!</p>
+        </div>
+        </div>
+       </a>
+
+        <a href="">
+          <div class="s6_con">
+            <div class="s6_img">
+              <img src="img/sec6-2.png" alt="">
+            </div>
+          <div class="s6_con_txt">
+            <h3>배달 서비스로 공차를<br>
+                편리하게 즐기세요!</h3>
+            <p class="s6_p2">배달 앱으로 공차를 주문해보세요!</p>
+            <p class="s6_p3">배달 앱으로<br>공차를 주문해보세요!</p>
+          </div>
+          </div>
+        </a>
+
+       <a href="">
+        <div class="s6_con">
+          <div class="s6_img">
+            <img src="img/sec6-3.png" alt="">
+          </div>
+        <div class="s6_con_txt">
+          <h3>NEW 공차 멤버십 앱을<br>
+            만나보세요!</h3>
+          <p class="s6_p2">더 특별해진 신규 멤버십 앱을 다운받으세요.</p>
+          <p class="s6_p3">더 특별해진 신규 멤버십<br>앱을 다운받으세요.</p>
+        </div>
+        </div>
+       </a>
+
+      </div>
+    </section>
+
+    <section class="s6_2">
+      <div class="s6_txt"><h2>EVENT</h2></div>
+      
+      <div class="swiper mySwiper_s6">
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="">
+              <div class="s6_con">
+                <div class="s6_img">
+                  <img src="img/sec6-1.png" alt="">
+                </div>
+              <div class="s6_con_txt">
+                <h3>NEW OPEN<br>
+                    <span class="s6_ltl">오픈 매장 안내</span>
+                  </h3>
+                <p class="s6_p2">새로 오픈한 공차 매장 정보를 확인해보세요!</p>
+                <p class="s6_p3">새로 오픈한 공차<br>매장 정보를 확인해보세요!</p>
+              </div>
+              </div>
+             </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="">
+              <div class="s6_con">
+                <div class="s6_img">
+                  <img src="img/sec6-2.png" alt="">
+                </div>
+              <div class="s6_con_txt">
+                <h3>배달 서비스로 공차를<br>
+                    편리하게 즐기세요!</h3>
+                <p class="s6_p2">배달 앱으로 공차를 주문해보세요!</p>
+                <p class="s6_p3">배달 앱으로<br>공차를 주문해보세요!</p>
+              </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="">
+              <div class="s6_con">
+                <div class="s6_img">
+                  <img src="img/sec6-3.png" alt="">
+                </div>
+              <div class="s6_con_txt">
+                <h3>NEW 공차 멤버십 앱을<br>
+                  만나보세요!</h3>
+                <p class="s6_p2">더 특별해진 신규 멤버십 앱을 다운받으세요.</p>
+                <p class="s6_p3">더 특별해진 신규 멤버십<br>앱을 다운받으세요.</p>
+              </div>
+              </div>
+             </a>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+
+      <script>
+        var swiper = new Swiper(".mySwiper_s6", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      </script>
+
+    </section>
+
+    <!-- s6 end -->
+
+    <section class="s7">
+      <div class="s7_big_wrap">
+        <div class="s7_txt">
+          <h2>NOTICE</h2>
+          <a href=""><p>vew more +</p></a>
+        </div>
+  
+        <div class="s7_wrap">
+          <a href=""><div class="s7_con s7_bdr_con">
+            <p class="s7_p1 s7_pfont">공차 회원 개인정보 처리방침 및 위치정보 이용약관 변경 공지</p>
+            <p class="s7_p2">2023년 09월 20일</p>
+          </div></a>
+  
+          <a href=""><div class="s7_con">
+            <p class="s7_p1">공차 음료 영양정보 안내</p>
+            <p class="s7_p2">2023년 05월 03일</p>
+          </div></a>
+  
+          <a href=""><div class="s7_con">
+            <p class="s7_p1">공차 일부 메뉴 가격 인상 안내</p>
+            <p class="s7_p2">2023년 04월 19일</p>
+          </div></a>
+  
+          <a href=""><div class="s7_con">
+            <p class="s7_p1">매장 내 1회용품 사용 불가 안내</p>
+            <p class="s7_p2">2022년 11월 24일</p>
+          </div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- sec7 end -->
+
+    <footer>
+      <div class="ftr_wrap">
+        <div class="ftr_img"><img src="img/ft_logo.png" alt=""></div>
+        <div class="call_canter">
+          <h4>고객센터 02-779-7758</h4>
+         <div class="call_tim">
+
+          <div class="call_num">
+            <p>운영시간 :</p>
+          <div class="call_lst">
+            <p>월요일~목요일 ( 오전 9시 ~ 오후 6시),</p>
+            <p>금요일 (오전 9시 ~ 오후 1시)</p>
+          </div>
+          </div>
+
+          <p>
+            점심시간 : 낮 12시~오후 1시 / 주말 및 공휴일 휴무
+          </p>
+         </div>
+        </div>
+
+        <div class="ftr_con1">
+         <div class="ftr_con1-1">
+          <p class="ftr_mgn">회사소개</p> <img src="img/ftr_1.png" alt="">
+          <p>제휴/제안</p> <img src="img/ftr_1.png" alt="">
+          <p>고객센터</p> <img src="img/ftr_1.png" alt="">
+          <p>개인정보처리방침</p> <img src="img/ftr_1.png" alt="" class="ftr_none">
+         </div>
+          <div class="ftr_con1-2">
+          <p class="ftr_mgnno">이메일무단수집거부</p> <img src="img/ftr_1.png" alt="">
+          <p>윤리규범 실천지침</p> <img src="img/ftr_1.png" alt="">
+          <p> HOT-LINE</p>
+          </div>
+        </div>
+
+      <div class="ftr_add">
+        <div class="ad_1">
+          <p class="ad_p1">서울 종로구 종로 47(공평동, 7층)</p> <img src="img/ftr_1.png" alt="">
+          <p class="ad_p2">(주)공차코리아 대표이사 고희경</p>
+        </div>
+
+        <div class="ad_2">
+          <p class="ad_p1">사업자등록번호 214-88-84534</p> <img src="img/ftr_1.png" alt="">
+          <p class="ad_p2">통신판매번호: 2020-서울종로-0966</p>
+        </div>
+      </div>
+
+      <div class="ftr_lst">
+        <p>(C)GONGCHA KOREA CO.,LTD ALL RIGHTS RESERVED.</p>
+      </div>
+
+    </div>
+    </footer>
+
+</body>
+</html> 
